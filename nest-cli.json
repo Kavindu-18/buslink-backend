@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/buslink-backend/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/buslink-backend/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/buslink-backend",
+  "projects": {
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    },
+    "booking": {
+      "type": "application",
+      "root": "apps/booking",
+      "entryFile": "main",
+      "sourceRoot": "apps/booking/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/booking/tsconfig.app.json"
+      }
+    },
+    "bus": {
+      "type": "application",
+      "root": "apps/bus",
+      "entryFile": "main",
+      "sourceRoot": "apps/bus/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bus/tsconfig.app.json"
+      }
+    },
+    "buslink-backend": {
+      "type": "application",
+      "root": "apps/buslink-backend",
+      "entryFile": "main",
+      "sourceRoot": "apps/buslink-backend/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/buslink-backend/tsconfig.app.json"
+      }
+    },
+    "notification": {
+      "type": "application",
+      "root": "apps/notification",
+      "entryFile": "main",
+      "sourceRoot": "apps/notification/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/notification/tsconfig.app.json"
+      }
+    },
+    "tracking": {
+      "type": "application",
+      "root": "apps/tracking",
+      "entryFile": "main",
+      "sourceRoot": "apps/tracking/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/tracking/tsconfig.app.json"
+      }
+    }
+  }
+}
